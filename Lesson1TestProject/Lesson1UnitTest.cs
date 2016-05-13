@@ -7,6 +7,11 @@ namespace Lesson1TestProject
     [TestClass]
     public class Lesson1UnitTest
     {
+        /**
+        * Unit Test for OutputStringToConsole MEthod of the Program class
+        *
+        * @method OutputStringToConsoleTestMethod1
+        */
         [TestMethod]
         public void OutputStringToConsoleTestMethod1()
         {

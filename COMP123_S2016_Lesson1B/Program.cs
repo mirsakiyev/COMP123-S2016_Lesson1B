@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 * Aslan Mirsakiyev
 * #300850326
 * 13 of May 2016
-* Version 0.4-Extracted OutputStringToConsole from GetUserName method
+* Version 0.5-Refactored
 */
 namespace COMP123_S2016_Lesson1B
 {
@@ -63,15 +63,10 @@ namespace COMP123_S2016_Lesson1B
         */
         public static string OutputStringToConsole(string outputString, bool hasNewLine)
         {
-            if (hasNewLine)
-            {
-                Console.WriteLine(outputString);
-            }
-            else
-            {
-                Console.Write(outputString);
-            }
-          
+           // refactored using the ternary operator
+           string suffixString=hasNewLine  ? "\n" : "";
+            Console.Write(outputString + suffixString);
+
             return outputString;
         }
     }
