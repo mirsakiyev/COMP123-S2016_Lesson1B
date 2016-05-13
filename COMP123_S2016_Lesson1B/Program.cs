@@ -18,7 +18,7 @@ namespace COMP123_S2016_Lesson1B
     *
     * @class Program
     */
-    class Program
+    public class Program
     {
         /**
         * Main method for class Program
@@ -61,7 +61,7 @@ namespace COMP123_S2016_Lesson1B
         * @param {bool} hasNewLine
         * @return {string} UserName
         */
-        private static string OutputStringToConsole(string outputString, bool hasNewLine)
+        public static string OutputStringToConsole(string outputString, bool hasNewLine)
         {
             if (hasNewLine)
             {
