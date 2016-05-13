@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 * Aslan Mirsakiyev
 * #300850326
 * 13 of May 2016
-* Version 0.3-Updated comments for my driver class
+* Version 0.4-Extracted OutputStringToConsole from GetUserName method
 */
 namespace COMP123_S2016_Lesson1B
 {
@@ -39,16 +39,40 @@ namespace COMP123_S2016_Lesson1B
 
         public static string GetUserName()
         {
-            // Initilize Variables
-            
+            // Initilize Variables      
             string UserName = "";
-            Console.Write("Enter User Name: ");
+
+            OutputStringToConsole("Enter UserName: ", false);
             UserName=Console.ReadLine();
 
-            Console.WriteLine("/n_________________________");
+            Console.WriteLine("\n<><><><><><><><><><><><><><>");
+            Console.WriteLine();
             Console.WriteLine("You entered: " + UserName);
 
             return UserName;
+        }
+
+        /**
+        * This method srites a string to the console. Parameters allow the user
+        * to choose to add a newLine character
+        *
+        * @method OutputStringToConsole
+        * @param {string} outupString
+        * @param {bool} hasNewLine
+        * @return {string} UserName
+        */
+        private static string OutputStringToConsole(string outputString, bool hasNewLine)
+        {
+            if (hasNewLine)
+            {
+                Console.WriteLine(outputString);
+            }
+            else
+            {
+                Console.Write(outputString);
+            }
+          
+            return outputString;
         }
     }
 }
